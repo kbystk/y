@@ -8,9 +8,11 @@
   "license": "MIT",
   "dependencies": {
     "node-static": "^0.7.9",
+    "npm-run-all": "^4.0.2",
     "pug-cli": "^1.0.0-alpha6"
   },
   "scripts": {
+    "build": "npm-run-all -p build:*",
     "build:pug": "pug src/*.pug -o build",
     "serve": "static -p 9999 build"
   }
