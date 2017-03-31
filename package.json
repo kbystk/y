@@ -14,6 +14,6 @@
   "scripts": {
     "build": "npm-run-all -p build:*",
     "build:pug": "pug src/*.pug -o docs/y",
-    "serve": "static -p 9999 build"
+    "serve": "static -p 9999 docs"
   }
 }

@@ -1,0 +1,25 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #BD3129;
+  height: 4rem;
+  margin-bottom: 2rem;
+}
+
+.profile {
+  text-align: center;
+  font-family: 'Cutive Mono', monospace;
+}
+
+.profile .photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+
+.profile h1, .profile h2 {
+  margin: 0;
+}
