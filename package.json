@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "npm-run-all -p build:*",
-    "build:pug": "pug src/*.pug -o build",
+    "build:pug": "pug src/*.pug -o docs",
     "serve": "static -p 9999 build"
   }
 }
