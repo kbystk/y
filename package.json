@@ -4,7 +4,7 @@
   "description": "Personal website",
   "main": "index.js",
   "repository": "ssh://git@github.com/kbystk/y.git",
-  "author": "jigsaw (http://jgs.me)",
+  "author": "Takaya Kobayashi (https://kbys.tk/y)",
   "license": "MIT",
   "dependencies": {
     "node-static": "^0.7.9",
