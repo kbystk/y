@@ -1,9 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: 'kbys.tk/y',
+    title: 'Takaya Kobayashi'
   },
   plugins: [
-    '@jacobmischka/gatsby-plugin-react-svg',
-    'gatsby-plugin-react-helmet'
-  ],
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-react-svg',
+    'gatsby-transformer-yaml',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: './src/data/'
+      }
+    }
+  ]
 }

@@ -7,14 +7,22 @@
   "author": "Takaya Kobayashi (https://kbys.tk/y)",
   "license": "MIT",
   "dependencies": {
-    "@jacobmischka/gatsby-plugin-react-svg": "^1.0.0",
-    "gatsby": "^1.9.215",
-    "gatsby-link": "^1.6.37",
-    "gatsby-plugin-react-helmet": "^2.0.5",
+    "gatsby": "^2.0.31",
+    "gatsby-link": "^2.0.5",
+    "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-react-svg": "^2.0.0",
+    "gatsby-source-filesystem": "^2.0.5",
+    "gatsby-transformer-yaml": "^2.1.3",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
     "react-helmet": "^5.2.0"
   },
   "scripts": {
     "build": "gatsby build",
-    "dev": "gatsby develop --host localhost"
+    "dev": "gatsby develop --host localhost",
+    "lint": "prettier --write src/{**/*,*}.js"
+  },
+  "devDependencies": {
+    "prettier": "^1.14.3"
   }
 }

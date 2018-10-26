@@ -12,6 +12,7 @@ header {
   justify-content: center;
   font-family: monospace;
   padding: .3rem 0;
+  background-color: #82221C;
 }
 
 header a {
@@ -26,7 +27,7 @@ header svg {
   position: absolute;
 }
 
-header::before {
+header a::before {
   content: ' ';
   border-top: 7rem solid #BD3129;
   border-left: 7rem solid transparent;
@@ -34,6 +35,8 @@ header::before {
   border-bottom: 0 solid transparent;
   position: absolute;
   top: 0;
+  left: 50%;
+  margin-left: -7rem;
 }
 
 #page-1 {
@@ -88,9 +91,9 @@ header::before {
   color: #333;
 }
 
-.link i {
+.link .icon {
   font-size: 1.6rem;
-  margin: .5rem;
+  margin-right: .5rem;
 }
 
 #page-2 {
@@ -111,19 +114,21 @@ header::before {
   padding: 0 2rem;
 }
 
-.two-pane {
-  display: flex;
-  flex-direction: row;
+.link-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem 2rem;
+  margin: 1.5rem auto;
   justify-content: center;
 }
 
-.pane {
-  width: 40vw;
+.link-grid a {
+  margin: 0;
 }
 
-.pane-links {
-  width: 50%;
-  margin: 0 auto;
+.link-grid a span {
+  position: relative;
+  top: -.2rem;
 }
 
 ._404 {

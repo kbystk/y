@@ -22,7 +22,10 @@ export default ({children}) => (
         {name: 'theme-color', content: '#BD3129'},
         {property: 'og:title', content: 'Takaya Kobayashi'},
         {property: 'og:url', content: 'https://kbys.tk/y'},
-        {property: 'og:image', content: 'https://kbys.tk/img/takaya-kobayashi.jpg'},
+        {
+          property: 'og:image',
+          content: 'https://kbys.tk/img/takaya-kobayashi.jpg'
+        },
         {property: 'og:image:width', content: '400'},
         {property: 'og:image:height', content: '400'},
         {property: 'og:description', content: 'About Takaya Kobayashi'},
@@ -31,10 +34,17 @@ export default ({children}) => (
         {name: 'twitter:creator', content: '@neo6120'}
       ]}
       link={[
-        {href: 'https://fonts.googleapis.com/css?family=Cutive+Mono', rel: 'stylesheet'},
-        {href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', rel: 'stylesheet', integrity: 'sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN', crossorigin: 'anonymous'}
+        {
+          href: 'https://fonts.googleapis.com/css?family=Cutive+Mono',
+          rel: 'stylesheet'
+        }
       ]}
       script={[
+        {
+          type: 'text/javascript',
+          src: 'https://use.fontawesome.com/releases/v5.4.2/js/all.js',
+          defer: true
+        },
         {type: 'text/javascript', innerHTML: ga}
       ]}
     />
@@ -44,7 +54,7 @@ export default ({children}) => (
           <Logo />
         </a>
       </header>
-      {children()}
+      {children}
     </div>
   </div>
 )
