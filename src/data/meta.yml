@@ -5,9 +5,9 @@ mainLinks:
   - name: Codes
     href: https://github.com/e-jigsaw
     fa: fab fa-github
-  - name: Notes
-    href: https://dev.to/jgs
-    fa: fab fa-dev
+  - name: Scrapbox
+    href: https://scrapbox.io/jigsaw/
+    fa: fas fa-sticky-note 
 links:
   - name: neo6120
     href: https://twitter.com/neo6120
@@ -18,9 +18,9 @@ links:
   - name: takaya-kobayashi
     href: https://www.linkedin.com/in/takaya-kobayashi/
     fa: fab fa-linkedin
-  - name: jigsaw
-    href: https://scrapbox.io/jigsaw/
-    fa: far fa-sticky-note
+  - name: jgs
+    href: https://dev.to/jgs
+    fa: fab fa-dev
   - name: neo6120
     href: https://steamcommunity.com/id/neo6120
     fa: fab fa-steam
