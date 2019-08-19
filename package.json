@@ -2,7 +2,6 @@
   "private": true,
   "name": "y",
   "description": "Personal website",
-  "main": "index.js",
   "repository": "ssh://git@github.com/kbystk/y.git",
   "author": "Takaya Kobayashi (https://kbys.tk/y)",
   "license": "MIT",
@@ -18,7 +17,7 @@
     "react-helmet": "^5.2.0"
   },
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build && cp -r src/images/favicon/* public",
     "dev": "gatsby develop --host localhost",
     "lint": "prettier --write src/{**/*,*}.js"
   },
