@@ -5,23 +5,30 @@
   "repository": "ssh://git@github.com/kbystk/y.git",
   "author": "Takaya Kobayashi (https://kbys.tk/y)",
   "license": "MIT",
+  "devDependencies": {
+    "@types/js-yaml": "^3.12.1",
+    "@types/node": "^12.7.5",
+    "@types/react": "^16.9.2",
+    "@typescript-eslint/eslint-plugin": "^2.2.0",
+    "@typescript-eslint/parser": "^2.2.0",
+    "eslint": "^6.3.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^2.0.1",
+    "isomorphic-unfetch": "^3.0.0",
+    "prettier": "^1.18.2",
+    "typescript": "^3.6.3"
+  },
   "dependencies": {
-    "gatsby": "^2.0.31",
-    "gatsby-link": "^2.0.5",
-    "gatsby-plugin-react-helmet": "^3.0.0",
-    "gatsby-plugin-react-svg": "^2.0.0",
-    "gatsby-source-filesystem": "^2.0.5",
-    "gatsby-transformer-yaml": "^2.1.3",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
-    "react-helmet": "^5.2.0"
+    "@svgr/webpack": "^4.3.2",
+    "js-yaml": "^3.13.1",
+    "next": "^9.0.5",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   },
   "scripts": {
-    "build": "gatsby build && cp -r src/images/favicon/* public",
-    "dev": "gatsby develop --host localhost",
-    "lint": "prettier --write src/{**/*,*}.js"
-  },
-  "devDependencies": {
-    "prettier": "^1.14.3"
+    "dev": "next",
+    "build": "next build && next export"
   }
 }
