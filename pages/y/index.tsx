@@ -1,43 +1,22 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Layout from '../../layouts'
-import me from '../../images/takaya-kobayashi.jpg'
+import { NextPage } from 'next'
+import { Layout } from '../../components/Layout'
+import data from '../../meta.json'
 
-export const query = graphql`
-  {
-    dataYaml {
-      name
-      aka
-      copy
-      mainLinks {
-        name
-        href
-        fa
-      }
-      links {
-        name
-        href
-        fa
-      }
-    }
-  }
-`
-
-export default ({data}) => (
+const TopPage: NextPage = () => (
   <Layout>
     <div id="page-1">
       <div className="profile">
         <div className="photo">
-          <img src={me} />
+          <img src="/static/takaya-kobayashi.jpg" />
         </div>
-        <h1>{data.dataYaml.name}</h1>
-        <h2>a.k.a.&nbsp;{data.dataYaml.aka}</h2>
+        <h1>{data.name}</h1>
+        <h2>a.k.a.&nbsp;{data.aka}</h2>
       </div>
       <div className="copy">
-        <p>{data.dataYaml.copy}</p>
+        <p>{data.copy}</p>
       </div>
       <div className="main-links">
-        {data.dataYaml.mainLinks.map(link => (
+        {data.mainLinks.map(link => (
           <a className="link" href={link.href} key={link.href}>
             <i className={`icon ${link.fa}`} />
             {link.name}
@@ -51,7 +30,7 @@ export default ({data}) => (
           <span>Links</span>
         </h3>
         <div className="link-grid">
-          {data.dataYaml.links.map(link => (
+          {data.links.map(link => (
             <a className="link" href={link.href} key={link.href}>
               <i className={`icon ${link.fa}`} />
               <span>{link.name}</span>
@@ -62,3 +41,5 @@ export default ({data}) => (
     </div>
   </Layout>
 )
+
+export default TopPage
