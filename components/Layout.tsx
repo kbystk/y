@@ -91,7 +91,7 @@ export const Layout: FC = ({ children }) => (
         color: #333;
         text-decoration: none;
         display: block;
-        margin: 0 2rem;
+        margin: 0 1rem;
       }
 
       .link:hover {
@@ -113,7 +113,13 @@ export const Layout: FC = ({ children }) => (
       }
 
       #page-2 {
-        height: 100vh;
+        height: calc(100vh - 20rem);
+      }
+
+      #page-3,
+      #page-4,
+      #page-5 {
+        margin-bottom: 20rem;
       }
 
       .links h3 {
@@ -145,6 +151,28 @@ export const Layout: FC = ({ children }) => (
       .link-grid a span {
         position: relative;
         top: -0.2rem;
+      }
+
+      .update-container {
+        margin: 1.5rem auto;
+      }
+
+      .update-link {
+        width: 50vw;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+      }
+
+      @media (max-width: 376px) {
+        .update-link {
+          width: 90vw;
+          margin: 0 auto;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .update-link div:nth-of-type(1) {
+        font-size: 1.5rem;
       }
 
       ._404 {
