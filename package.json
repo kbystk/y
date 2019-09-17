@@ -11,24 +11,27 @@
     "@types/react": "^16.9.2",
     "@typescript-eslint/eslint-plugin": "^2.2.0",
     "@typescript-eslint/parser": "^2.2.0",
-    "eslint": "^6.3.0",
+    "eslint": "^6.4.0",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^2.0.1",
-    "isomorphic-unfetch": "^3.0.0",
+    "js-yaml": "^3.13.1",
     "prettier": "^1.18.2",
     "typescript": "^3.6.3"
   },
   "dependencies": {
+    "@jigsaw/sb-scripts": "^0.0.4",
+    "@progfay/scrapbox-parser": "^2.1.1",
     "@svgr/webpack": "^4.3.2",
-    "js-yaml": "^3.13.1",
     "next": "^9.0.5",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },
   "scripts": {
     "dev": "next",
-    "build": "next build && next export"
+    "build": "next build && next export",
+    "meta": "js-yaml meta.yml > meta.json",
+    "fetch": "node node_modules/@jigsaw/sb-scripts/prepare.js && node node_modules/@jigsaw/sb-scripts/dic.js && node scripts/fetch.js"
   }
 }
