@@ -1,6 +1,6 @@
 const {writeFileSync} = require('fs')
 const fetch = require('isomorphic-unfetch')
-const parse = require('@progfay/scrapbox-parser')
+const {parse} = require('@progfay/scrapbox-parser')
 const {resolve} = require('path')
 const dic = require(resolve(process.cwd(), './data/dic.json'))
 
@@ -12,8 +12,8 @@ const main = async () => {
   const json1 = await res1.json()
   const parsed1 = parse(json1.lines.map(line => line.text).join('\n'))
   const data = {
-    articles: parsed.blocks.map((block, index) => ({ title: block.nodes[0].href, id: dic[block.nodes[0].href], updated: json.lines.slice(1, -1)[index].updated })),
-    clips: parsed1.blocks.map((block, index) => ({ title: block.nodes[0].href, id: dic[block.nodes[0].href], updated: json1.lines.slice(1, -1)[index].updated }))
+    articles: parsed.slice(1, -1).map(({nodes}, index) => ({ title: nodes[0].href, id: dic[nodes[0].href], updated: json.lines.slice(1, -1)[index].updated })),
+    clips: parsed1.slice(1, -1).map(({nodes}, index) => ({ title: nodes[0].href, id: dic[nodes[0].href], updated: json1.lines.slice(1, -1)[index].updated }))
   }
   writeFileSync('./data/updates.json', JSON.stringify(data))
 }
