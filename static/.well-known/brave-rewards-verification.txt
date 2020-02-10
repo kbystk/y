@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: kbys.tk
+Token: 34214c0173700739fd57bb3c047c632e4e2120779aaa4fcb4ee0fb10c67a65ef
